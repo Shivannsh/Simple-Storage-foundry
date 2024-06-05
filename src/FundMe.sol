@@ -12,7 +12,6 @@ contract FundMe {
     mapping(address => uint256) public addressToAmountFunded;
     address[] public s_funders;
 
-    // Could we make this constant?  /* hint: no! We should make it immutable! */
     address private  immutable i_owner;
     uint256 public constant MINIMUM_USD = 5e18;
     AggregatorV3Interface private s_priceFeed;
@@ -81,11 +80,3 @@ contract FundMe {
     }
 }
 
-// Concepts we didn't cover yet (will cover in later sections)
-// 1. Enum
-// 2. Events
-// 3. Try / Catch
-// 4. Function Selector
-// 5. abi.encode / decode
-// 6. Hash with keccak256
-// 7. Yul / Assembly
